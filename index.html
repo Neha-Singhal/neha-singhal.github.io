@@ -5,16 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neha Singhal | Backend Developer</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #blue; color: #333; }
-    header, footer { background-color: #343a40; color: white; text-align: center; padding: 1rem; }
-    main { padding: 2rem; max-width: 900px; margin: auto; }
-    h1, h2 { color: #007bff; }
-    .project { background: white; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-    a { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .contact a { margin-right: 1rem; }
-    .button { background: #007bff; color: white; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none; }
-    .button:hover { background: #0056b3; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #F4F7FA;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #3B3C88, #5C6BC0);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #3B3C88;
+      border-bottom: 2px solid #00BCD4;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .project {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .project.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .button {
+      background: #FF5722;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 0.5rem;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #e64a19;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-right: 1rem;
+      color: #00BCD4;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #3B3C88;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -22,6 +107,7 @@
     <h1>Neha Singhal</h1>
     <p>Backend Developer | Python | FastAPI | PostgreSQL</p>
   </header>
+
   <main>
     <section>
       <h2>About Me</h2>
@@ -31,6 +117,7 @@
         JWT authentication, and cloud deployment.
       </p>
     </section>
+
     <section>
       <h2>Projects</h2>
 
@@ -45,29 +132,27 @@
         <h3>Social Assistance Finder</h3>
         <p>REST API to connect users in need with NGOs based on location and support type. Features JWT auth, CI/CD deployment.</p>
         <p><strong>Stack:</strong> FastAPI, PostgreSQL, JWT, Docker, Render</p>
-        <p><a href="https://github.com/Neha-Singhal/social_assistance_finder_app" target="_blank">🔗 GitHub</a></p>
+        <a class="button" href="https://github.com/Neha-Singhal/social_assistance_finder_app" target="_blank">🔗 View on GitHub</a>
       </div>
 
       <div class="project">
         <h3>Book Alchemy</h3>
         <p>Flask-based system for managing a digital library. Includes CRUD operations and real-time API integration.</p>
         <p><strong>Stack:</strong> Python, Flask, SQLite, SQLAlchemy</p>
-        <p><a href="https://github.com/Neha-Singhal/Book-Alchemy.git" target="_blank">🔗 GitHub</a></p>
+        <a class="button" href="https://github.com/Neha-Singhal/Book-Alchemy.git" target="_blank">🔗 View on GitHub</a>
       </div>
 
       <div class="project">
         <h3>Movie Project App</h3>
         <p>Movie management system using OOP and external APIs to automate movie details storage in JSON/CSV formats.</p>
         <p><strong>Stack:</strong> Python, Flask, OOP, CSV/JSON</p>
-        <p><a href="https://github.com/Neha-Singhal/my-movie-app" target="_blank">🔗 GitHub</a></p>
+        <a class="button" href="https://github.com/Neha-Singhal/my-movie-app" target="_blank">🔗 View on GitHub</a>
       </div>
     </section>
 
     <section>
       <h2>Resume</h2>
-      <p>
-        <a class="button" href="Neha_Singhal_Backend_Developer_CV.pdf" download>📄 Download My CV</a>
-      </p>
+      <a class="button" href="Neha_Singhal_Backend_Developer_CV.pdf" download>📄 Download My CV</a>
     </section>
 
     <section class="contact">
@@ -79,8 +164,26 @@
       </p>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Neha Singhal</p>
   </footer>
+
+  <script>
+    // Fade-in animation for project cards
+    const projects = document.querySelectorAll('.project');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    projects.forEach(project => {
+      observer.observe(project);
+    });
+  </script>
 </body>
 </html>
